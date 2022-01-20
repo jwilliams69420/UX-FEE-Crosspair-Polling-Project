@@ -22,10 +22,10 @@ With your skills, we, the heroes of hope, will be able to make these critical de
 - Can be used on all device sizes from mobile to desktop 
 - Should be accessible 
  
-## Stretch Challenges 
+### Stretch Challenges 
 - Support dark and light mode 
 - Display multiple questions 
 - Make the poll closing time configurable 
  
-## Reminder 
+### Reminder 
 Keep in mind that your pair may be less familiar with your core discipline. This is an opportunity for you to help teach and mentor as much as it is for you to actively learn. Be patient and considerate, we’re all at different levels in various skills. Ask questions, and focus on learning and growing.
