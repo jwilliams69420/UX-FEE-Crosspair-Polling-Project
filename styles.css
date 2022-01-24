@@ -1,0 +1,73 @@
+/* General */
+
+:root {
+  --space: 1.5rem;
+}
+
+.mobile-layout {
+  height: 896px;
+  width: 414px;
+  border: 2px solid black;
+}
+
+.color-overlay {
+    background: no-repeat url(./votehand.png);
+    background-color:hsl(0, 100%, 50%);
+    background-blend-mode:multiply;
+    background-position: center bottom;
+    background-size: 100%;
+    height: inherit;
+    width: inherit;
+}
+
+/* .bg-img{
+    background: no-repeat url(./votehand.png);
+    height: 653px;
+    width: 1020px;
+} */
+/* Layout Primitives */
+
+.center {
+  box-sizing: content-box;
+  margin-inline: auto;
+  max-inline-size: 60ch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.stack > * {
+  margin-block: 0;
+}
+
+.stack > * + * {
+  margin-block-start: var(--space, 1.5rem);
+}
+
+/* util styles */
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.top {
+    top: 50%;
+}
+
+.left {
+    left: 50%;
+}
+
+.transform {
+    transform: translate(-50%, 10%);
+}
