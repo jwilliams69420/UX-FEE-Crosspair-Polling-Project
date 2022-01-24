@@ -1,0 +1,23 @@
+{
+  "name": "ux-fee-crosspair-polling-project",
+  "version": "1.0.0",
+  "description": "A fun little project involving a UX Designer and Frontend Engineer pairing together to create a simple polling app.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jwilliams69420/UX-FEE-Crosspair-Polling-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jwilliams69420/UX-FEE-Crosspair-Polling-Project/issues"
+  },
+  "homepage": "https://github.com/jwilliams69420/UX-FEE-Crosspair-Polling-Project#readme",
+  "devDependencies": {
+    "jest": "^27.4.7"
+  }
+}
