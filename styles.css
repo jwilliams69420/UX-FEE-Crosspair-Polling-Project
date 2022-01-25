@@ -28,6 +28,10 @@
     left:60px
 }
 
+.vote-divider {
+    left:-55px;
+}
+
 /* Grid Layout */
 
 .top-left {
@@ -60,7 +64,6 @@
 .bottom-right {
     grid-column: col 3 / span 2;
     grid-row: row 3;
-    border-left: 1px solid white;
     margin-bottom: 2.5rem;
 }
 .container {
