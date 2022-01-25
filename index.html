@@ -13,6 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap"
       rel="stylesheet"
     />
+    <script src="script.js"></script> 
     <title>FEE/UX Crosspair Exercise</title>
   </head>
   <body>
@@ -26,11 +27,13 @@
               The question can go here and might be long, so we want to leave
               plenty of room for this to stack in the mobile version?
             </div>
-            <div class="top-right"></div>
+            <div class="top-right">
+                <img src="logo.svg" height="345" alt="vote">
+            </div>
             <div class="middle white flex row center-content">
               <div class="flex column center-content center-text">
                 <p class="sm-font semi-bold">Voting ends</p>
-                <p class="md-font bold">1:00</p>
+                <p class="md-font bold"><span id="timer">1:00</span></p>
               </div>
             </div>
             <div class="bottom-left">
