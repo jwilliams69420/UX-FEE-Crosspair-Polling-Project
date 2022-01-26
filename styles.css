@@ -28,7 +28,7 @@
     left:60px
 }
 
-.vote-divider {
+.total-votes-divider {
     left:-45px;
 }
 
@@ -36,6 +36,26 @@
     width: 100%;
     top: 27px;
 }
+
+#yay {
+    transition: transform .5s ease-in-out, top .8s, opacity .3s;
+}
+
+/* #yay:hover {
+    top: 250px;
+    opacity: 0;
+    transform: rotate(-45deg)
+} */
+
+#nay {
+    transition: transform .5s ease-in-out, top .8s, opacity .5s ease-out .3s;
+}
+
+/* #nay:hover {
+    top: 250px;
+    opacity: 0;
+    transform: rotate(-45deg)
+} */
 
 /* Grid Layout */
 

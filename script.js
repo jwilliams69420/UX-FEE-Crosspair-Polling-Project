@@ -115,24 +115,50 @@
 //     }, 0);
 // })();
 
-let seconds=60;
+let seconds = 60;
 let timer;
-function myFunction() {
-  if(seconds < 60) { 
-    document.getElementById("timer").innerHTML = "0:" + String(seconds).padStart(2, "0");
+
+function timerCountdown() {
+  if (seconds < 60) {
+    document.getElementById("timer").innerHTML =
+      "0:" + String(seconds).padStart(2, "0");
   }
-  if (seconds >0 ) { 
-     seconds--;
+  if (seconds > 0) {
+    seconds--;
   } else {
-     clearInterval(timer);
-     document.getElementById("timer").innerHTML="Voting has Ended"; 
+    clearInterval(timer);
+    document.getElementById("timer").innerHTML = "Voting has Ended";
   }
 }
-    timer = setInterval(function() { 
-      myFunction();
-    }, 10); 
 
-document.getElementById("timer").innerHTML="1:00"; 
+timer = setInterval(function () {
+  timerCountdown();
+}, 1000);
+
+document.getElementById("timer").innerHTML = "1:00";
+
+
+function castVote(elem){
+    const id = elem.id;
+    const style = elem.style;
+    let totalVote = Number(document.getElementById("total-vote-number").innerHTML)
+    style.top = '250px';
+    style.opacity = '0';
+    style.transform = 'rotate(-45deg)';
+    totalVote++
+    document.getElementById("total-vote-number").innerHTML = String(totalVote);
+
+    if(id == "yay"){
+        otherBallot = document.getElementById("nay");
+        otherBallot.style.opacity = "0";
+    }else{
+        style.transition = "transform .5s ease-in-out, top .8s, opacity .3s";
+        otherBallot = document.getElementById("yay");
+        otherBallot.style.transition = "transform .5s ease-in-out, top .8s, opacity .5s ease-out .3s";
+        otherBallot.style.opacity = "0";
+    }
+
+}
 
 // TODO:
 // Trigger end state after timer runs out

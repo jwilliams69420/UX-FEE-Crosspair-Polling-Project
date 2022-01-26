@@ -38,19 +38,19 @@
             </div>
             <div class="bottom-left">
               <div class="relative">
-                <div class="ballot flex row center-content center-text">
+                <div id="yay" class="ballot flex row center-content center-text" onClick = "castVote(this);">
                     <div class="flex column center-content black lg-font extra-bold"><p>Y</p></div>
                 </div>
               </div>
             </div>
             <div class="bottom-right">
               <div class="relative">
-                <div class="ballot flex row center-content center-text">
+                <div id="nay" class="ballot flex row center-content center-text" onClick = "castVote(this);">
                   <div class="flex column center-content black lg-font extra-bold"><p>N</p></div>
                 </div>
-                <div class="vote-divider absolute">
+                <div class="total-votes-divider absolute">
                     <div class="total-votes absolute center-text white">
-                        <p class="md-font bold ">152</p>
+                        <p id="total-vote-number" class="md-font bold ">152</p>
                         <p class="sm-font semi-bold">votes</p>
                     </div>
                     <img src="vote_divider.svg" height="310" alt="number of votes">
