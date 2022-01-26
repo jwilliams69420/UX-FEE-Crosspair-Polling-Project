@@ -21,7 +21,6 @@ const getPollQuestion = (state) => state.pollQuestion;
 const getInnerHTML = (elemID) => document.getElementById(elemID).innerHTML;
 const setInnerHTML = (elemID, content) => document.getElementById(elemID).innerHTML = content;
 
-
 let seconds = 60;
 let timer;
 
@@ -43,7 +42,6 @@ timer = setInterval(function () {
 }, 1000);
 
 document.getElementById("timer").innerHTML = "1:00";
-
 
 function castVote(elem){
     const id = elem.id;
@@ -67,7 +65,3 @@ function castVote(elem){
 
 }
 
-// TODO:
-// Trigger end state after timer runs out
-// Add animations
-// Add interactions
