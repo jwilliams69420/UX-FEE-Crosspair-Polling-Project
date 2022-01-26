@@ -13,23 +13,23 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap"
       rel="stylesheet"
     />
-    <script src="script.js"></script> 
+    <script src="script.js"></script>
     <title>FEE/UX Crosspair Exercise</title>
   </head>
   <body>
     <div class="center relative">
-      <div class="mobile-layout absolute top left transform">
+      <div class="mobile-layout absolute">
         <div class="absolute full-height">
           <div class="grid full-height">
             <div
-            id="poll-question"
+              id="poll-question"
               class="top-left box white flex column center-content lg-font bold"
             >
               The question can go here and might be long, so we want to leave
               plenty of room for this to stack in the mobile version?
             </div>
             <div class="top-right">
-                <img src="logo.svg" height="345" alt="vote">
+              <img src="logo.svg" height="345" alt="vote" />
             </div>
             <div class="middle white flex row center-content">
               <div class="flex column center-content center-text">
@@ -39,22 +39,42 @@
             </div>
             <div class="bottom-left">
               <div class="relative">
-                <div id="yay" class="ballot flex row center-content center-text" onClick = "castVote(this);">
-                    <div class="flex column center-content black lg-font extra-bold"><p>Y</p></div>
+                <div
+                  id="yay"
+                  class="ballot flex row center-content center-text"
+                  onClick="castVote(this);"
+                >
+                  <div
+                    class="flex column center-content black lg-font extra-bold"
+                  >
+                    <p>Y</p>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="bottom-right">
               <div class="relative">
-                <div id="nay" class="ballot flex row center-content center-text" onClick = "castVote(this);">
-                  <div class="flex column center-content black lg-font extra-bold"><p>N</p></div>
+                <div
+                  id="nay"
+                  class="ballot flex row center-content center-text"
+                  onClick="castVote(this);"
+                >
+                  <div
+                    class="flex column center-content black lg-font extra-bold"
+                  >
+                    <p>N</p>
+                  </div>
                 </div>
                 <div class="total-votes-divider absolute">
-                    <div class="total-votes absolute center-text white">
-                        <p id="total-vote-number" class="md-font bold ">152</p>
-                        <p class="sm-font semi-bold">votes</p>
-                    </div>
-                    <img src="vote_divider.svg" height="310" alt="number of votes">
+                  <div class="total-votes absolute center-text white">
+                    <p id="total-vote-number" class="md-font bold">152</p>
+                    <p class="sm-font semi-bold">votes</p>
+                  </div>
+                  <img
+                    src="vote_divider.svg"
+                    height="310"
+                    alt="number of votes"
+                  />
                 </div>
               </div>
             </div>
