@@ -1,5 +1,5 @@
 const state = {
-    totalVotes: 152,
+    totalVotes: 49,
     nayVotes: 0,
     yayVotes: 0,
     percentageNayVotes: 0,
@@ -42,6 +42,15 @@ timer = setInterval(function () {
 }, 1000);
 
 document.getElementById("timer").innerHTML = "1:00";
+
+// TODO: replace getting vote logic with the util functions
+//       Initialize Total votes with state instead of hardcode into HTML
+//       Add logic to end vote once totalVotes = 50
+//       Make svg border thicker
+//       Add util functions to calculate percentages and set inner HTML to those values
+//       Add util function to animate number incrementation 
+//       Add total votes below graphs
+//       See if an IIFE can initialize state in HTML
 
 function castVote(elem){
     const id = elem.id;
