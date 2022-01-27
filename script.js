@@ -1,3 +1,24 @@
+// TODO: replace getting vote logic with the util functions
+//       Initialize Total votes with state instead of hardcode into HTML
+//       Add logic to end vote once totalVotes = 50
+//       Make svg border thicker
+//       Add util functions to calculate percentages and set inner HTML to those values
+//       Add util function to animate number incrementation 
+//       Add total votes below graphs
+//       See if an IIFE can initialize state in HTML
+
+/*
+// REQUIREMENTS: 
+    - Display a live percentage of the “yea” and “nay” votes
+    - Display a live count of the total number of votes
+    - Only one vote per person
+    - Simulate voting: a random “yea” or “nay” vote will be cast at a random interval
+    - Once 50 votes have been submitted or 1 minute has passed, voting is closed
+    - When voting is complete, display the winning decision
+    - Can be used on all device sizes from mobile to desktop
+    - Should be accessible
+*/
+
 const state = {
     totalVotes: 49,
     nayVotes: 0,
@@ -42,15 +63,6 @@ timer = setInterval(function () {
 }, 1000);
 
 document.getElementById("timer").innerHTML = "1:00";
-
-// TODO: replace getting vote logic with the util functions
-//       Initialize Total votes with state instead of hardcode into HTML
-//       Add logic to end vote once totalVotes = 50
-//       Make svg border thicker
-//       Add util functions to calculate percentages and set inner HTML to those values
-//       Add util function to animate number incrementation 
-//       Add total votes below graphs
-//       See if an IIFE can initialize state in HTML
 
 function castVote(elem){
     const id = elem.id;
