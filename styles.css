@@ -29,6 +29,33 @@
     left:60px
 }
 
+.graph-container {
+    top: 60px;
+    left: 60px;
+    height: 220px;
+    width: 80px;
+    overflow-y: hidden;
+}
+.bar-graph {
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+   bottom: 0;
+}
+
+.vote-percentage {
+    top:-35px;
+    width: 100%;
+}
+
+#nay-total{
+    height:80%;
+}
+
+#yay-total {
+    height: 80%;
+}
+
 .total-votes-divider {
     left:-45px;
 }
