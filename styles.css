@@ -35,6 +35,7 @@
     height: 220px;
     width: 80px;
     overflow-y: hidden;
+    display: none;
 }
 .bar-graph {
     width: 100%;
@@ -46,14 +47,17 @@
 .vote-percentage {
     top:-35px;
     width: 100%;
+    display: none;
 }
 
 #nay-total{
-    height:80%;
+    /* height:80%; */
+    display: none;
 }
 
 #yay-total {
-    height: 80%;
+    /* height: 80%; */
+    display: none;
 }
 
 .total-votes-divider {
