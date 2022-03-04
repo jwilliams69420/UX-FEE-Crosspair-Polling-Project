@@ -29,39 +29,70 @@
     left:60px
 }
 
+.hide-overflow {
+    overflow: hidden;
+}
+
+.clipping-mask {
+    height: 280px;
+overflow: hidden;
+}
+
 .graph-container {
     top: 60px;
     left: 60px;
     height: 220px;
     width: 80px;
     overflow-y: hidden;
-    display: none;
+    opacity: 0;
+    z-index: -99;
 }
 .bar-graph {
     width: 100%;
     background-color: #fff;
     position: absolute;
    bottom: 0;
+   height:1%;
+   /* transition: height 2s; */
 }
+
+/* .bar-graph:hover {
+    height: 80%;
+} */
 
 .vote-percentage {
     top:-35px;
     width: 100%;
-    display: none;
+    /* display: none; */
 }
 
 #nay-total{
-    /* height:80%; */
-    display: none;
+    /* height:20%; */
+    transition: height 2s; 
+    /* display: none; */
+}
+
+#nay-total:hover {
+    height: 80%;
+}
+
+.clicked {
+    height: 80%;
 }
 
 #yay-total {
     /* height: 80%; */
-    display: none;
+    /* display: none; */
+}
+
+#yay-total:hover {
+    height: 80%;
+    /* display: none; */
 }
 
 .total-votes-divider {
-    left:-45px;
+    left:40%;
+    top:61%;
 }
 
 .total-votes {
@@ -69,6 +100,9 @@
     top: 27px;
 }
 
+#graphContainer {
+    display: none;
+}
 #yay {
     transition: transform .5s ease-in-out, top .8s, opacity .3s;
 }
@@ -116,6 +150,7 @@
     grid-column: col / span 2;
     grid-row: row 3;
     margin-bottom: 2.5rem;
+    /* z-index: -10; */
 }
 
 .bottom-right {
