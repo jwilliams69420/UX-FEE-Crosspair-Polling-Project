@@ -92,6 +92,15 @@ let incrementBarGraph = (val, selectionTotal, SelectionPercentage, selectionElem
   let voteTotal = document.getElementById(selectionElem);
   document.getElementById(SelectionPercentage).innerHTML = String(calcPercentage(val)) + "%";
   document.getElementById(selectionTotal).innerHTML = String(val) + " " + selectionElem.slice(0, 3) + " votes";
+  
+  
+  // if (selectionElem == "nay-total"){
+  //   console.log("nay votes: " + val);
+  // }
+
+  // if (selectionElem == "yea-total"){
+  //   console.log("yea votes: " + val);
+  // }
 
   // nayTotal.style.transition ="height .7s ease-in,transform .7s ease-in,";
   voteTotal.style.height = String(calcPercentage(val)) + "%";
@@ -99,8 +108,10 @@ let incrementBarGraph = (val, selectionTotal, SelectionPercentage, selectionElem
   
 }
 
+
 let incrementVote = (vote) => {
   let total = vote + 1;
+  console.log(vote);
   return total;
 }
 
@@ -108,9 +119,17 @@ let randomVote = () => {
   let num = Math.random();
   if (num < 0.25) {
     yay = incrementVote(yay);
+    allVotes = yay + nay;
+    console.log("yea total: " + yay);
+    console.log("nay total: " + nay);
+    console.log("all votes total: " + allVotes);
     incrementBarGraph(yay, TOTAL_YEA_VOTES, YEA_PERCENTAGE, YEA_TOTAL);
 } else {
   	nay = incrementVote(nay);
+    allVotes = yay + nay;
+    console.log("yea total: " + yay);
+    console.log("nay total: " + nay);
+    console.log("all votes total: " + allVotes);
     incrementBarGraph(nay, TOTAL_NAY_VOTES, NAY_PERCENTAGE, NAY_TOTAL);
 }
  calcPercentage(nay);
@@ -146,7 +165,12 @@ function timerCountdown() {
   }
   if (seconds > 0 && allVotes < 50) {
     seconds--;
-    allVotes = yay + nay;
+    // allVotes = yay + nay;
+    // console.log("yea votes: " + yay);
+    // console.log("yea: " + yay);
+    randomVote();
+    console.log("allVotes: " + allVotes)
+    document.getElementById("total-vote-number").innerHTML = String(allVotes);
   } else {
     clearInterval(timer);
     document.getElementById("timer").innerHTML = "Voting has Ended";
@@ -156,10 +180,12 @@ function timerCountdown() {
 
 timer = setInterval(function () {
   timerCountdown(); 
-  randomVote();
+  // randomVote();
   // incrementBarGraph(nay);
-  document.getElementById("total-vote-number").innerHTML = String(allVotes);
-}, 1000);
+  // document.getElementById("total-vote-number").innerHTML = String(allVotes);
+  // document.getElementById("total-yea-votes").innerHTML = String(yay);
+  console.log(allVotes)
+}, 10);
 
 document.getElementById("timer").innerHTML = "1:00";
 // document.getElementById("total-vote-number").innerHTML = "100";
@@ -179,26 +205,31 @@ function castVote(elem) {
   style.transform = "rotate(-45deg)";
 
   // console.log(totalVote);
-  // totalVote++;
+  // allVotes++;
   // console.log(totalVote);
-  document.getElementById("total-vote-number").innerHTML = String(totalVote);
+  // document.getElementById("total-vote-number").innerHTML = String(allVotes);
 
   if (id == "yay") {
     otherBallot = document.getElementById("nay");
     otherBallot.style.opacity = "0";
+    incrementVote(yay);
+    incrementBarGraph(yay, TOTAL_YEA_VOTES, YEA_PERCENTAGE, YEA_TOTAL);
+    allVotes = yay + nay
+    // document.getElementById("total-vote-number").innerHTML = String(allVotes);
+    console.log(allVotes)
   } else {
     style.transition = selectedBallotTransition;
     otherBallot = document.getElementById("yay");
     otherBallot.style.transition = unselectedBallotTransition;
     otherBallot.style.opacity = noOpacity;
+    // incrementVote(nay)
   }
 
   graphContainer1.style.opacity = "1";
   graphContainer2.style.opacity = "1";
   graphContainer2.style.zIndex = "1";
-  graphContainer2.classList.add("clicked");
   nayTotal.style.transition ="height .7s ease-in,transform .7s ease-in,";
-  yayTotal.style.transition ="height .7s ease-in,transform .7s ease-in,";
+  // yayTotal.style.transition ="height .7s ease-in,transform .7s ease-in,";
   nayTotal.style.height = String(calcPercentage(nay)) + "%";
   // nayTotal.style.height ="80%";
 
